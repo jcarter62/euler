@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Euler Project</title>
+</head>
+<body>
+<ul>
+    {% for i in range(context.problems) %}
+        <li><a href="/prob{{ i + 1 }}">Problem {{ i + 1 }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
