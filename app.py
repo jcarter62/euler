@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def route_home():
-    context = {'problems': 5}
+    context = {'problems': 7}
     return render_template('home.html', context=context)
 
 
@@ -51,10 +51,11 @@ def route_p3(num):
     context['problem'] = p.description
     return render_template('result.html', context=context)
 
+
 @app.route('/prob4')
 def route_p4():
     context = {
-        'title': '3',
+        'title': '4',
         'problem': '',
         'result': ''
     }
@@ -62,6 +63,46 @@ def route_p4():
     context['result'] = str(p.result)
     context['problem'] = p.description
     return render_template('result.html', context=context)
+
+
+@app.route('/prob5')
+def route_p5():
+    context = {
+        'title': '5',
+        'problem': '',
+        'result': ''
+    }
+    p = problems.P5()
+    context['result'] = str(p.result)
+    context['problem'] = p.description
+    return render_template('result.html', context=context)
+
+
+@app.route('/prob6')
+def route_p6():
+    context = {
+        'title': '6',
+        'problem': '',
+        'result': ''
+    }
+    p = problems.P6()
+    context['result'] = str(p.result)
+    context['problem'] = p.description
+    return render_template('result.html', context=context)
+
+
+@app.route('/prob7')
+def route_p7():
+    context = {
+        'title': '7',
+        'problem': '',
+        'result': ''
+    }
+    p = problems.P7()
+    context['result'] = str(p.result)
+    context['problem'] = p.description
+    return render_template('result.html', context=context)
+
 
 if __name__ == '__main__':
     app.run()

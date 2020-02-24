@@ -1,6 +1,6 @@
 import json
 import problems
 
-s = str(problems.P5())
+s = str(problems.P7())
 
 print(s)
